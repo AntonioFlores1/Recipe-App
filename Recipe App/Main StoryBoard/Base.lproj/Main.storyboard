@@ -11,7 +11,7 @@
         <!--Recipe List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="RecipeListViewController" customModule="Recipe_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="descriptionVC" id="BYZ-38-t0r" customClass="RecipeListViewController" customModule="Recipe_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,7 +67,6 @@
                                             <outlet property="recipeImage" destination="e3E-Bz-G4A" id="UTk-96-7yE"/>
                                             <outlet property="recipeName" destination="eJ6-jI-TTq" id="onl-8h-pQs"/>
                                             <outlet property="recipeRating" destination="ASF-Cw-XUh" id="RqY-KW-2Zr"/>
-                                            <segue destination="d7e-3r-m8L" kind="show" id="q75-7W-YAN"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -89,6 +88,7 @@
                     <connections>
                         <outlet property="recipeListSearchBar" destination="Zeb-fU-X3s" id="5EY-Cw-i94"/>
                         <outlet property="recipeListTableView" destination="z2H-W9-g9w" id="ej5-3P-IYC"/>
+                        <segue destination="d7e-3r-m8L" kind="show" identifier="descriptionVC" id="cz7-kE-ULt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -98,7 +98,7 @@
         <!--Description View Controller-->
         <scene sceneID="Eoh-pq-i1k">
             <objects>
-                <viewController id="d7e-3r-m8L" customClass="DescriptionViewController" customModule="Recipe_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="d7e-3r-m8L" customClass="DescriptionViewController" customModule="Recipe_App" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HBw-D8-4gj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -16,11 +16,22 @@ class DescriptionViewController: UIViewController {
     
     var recipeModel: Recipe?
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        descriptionSetup()
     }
     
+    func descriptionSetup(){
+        print(recipeModel)
+        if let recipeModel = recipeModel {
+            recipeDecTextView.isEditable = false
+            recipeImage.image = recipeModel.image
+            recipeNameLabel.text = recipeModel.name
+            recipeRatingLabel.text = "Rating: \(recipeModel.rating)"
+            recipeDecTextView.text = recipeModel.description
+        } else {return}
+    }
 
     
 
