@@ -35,7 +35,15 @@ class RecipeListViewController: UIViewController {
         recipeListSearchBar.delegate = self
     }
     
-    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "descriptionVC" {
+//            guard let recipeData = sender as? Recipe else {return}
+//            if let descriptionVC = segue.destination as? DescriptionViewController {
+//                descriptionVC.segueRecipeData = recipeData
+//            }
+//        }
+//        
+//    }
 }
 
 
@@ -55,6 +63,11 @@ extension RecipeListViewController: UITableViewDataSource, UITableViewDelegate {
         
         return recipeListCell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "descriptionVC", sender: self.filteredRecipeList[indexPath.row])
+    }
+    
     
 }
 
