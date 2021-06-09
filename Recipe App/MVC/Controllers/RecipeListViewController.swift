@@ -8,11 +8,11 @@
 import UIKit
 
 class RecipeListViewController: UIViewController {
-    
 
     @IBOutlet weak var recipeListTableView: UITableView!
     @IBOutlet weak var recipeListSearchBar: UISearchBar!
     
+    let recipeModel = Recipe.getRecipes()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,19 +26,23 @@ class RecipeListViewController: UIViewController {
         recipeListSearchBar.delegate = self
     }
     
-    
-    
 
 }
 
 extension RecipeListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return recipeModel.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        
+        guard let recipeListCell = recipeListTableView.dequeueReusableCell(withIdentifier: "recipeListCell", for: indexPath) as? RecipeListTableViewCell else {return UITableViewCell() }
+        
+        recipeListCell.recipeImage.image = recipeModel[indexPath.row].image
+        recipeListCell.recipeName.text = recipeModel[indexPath.row].name
+        recipeListCell.recipeRating.text = "Rating: \(recipeModel[indexPath.row].rating)"
+        return recipeListCell
     }
 }
 

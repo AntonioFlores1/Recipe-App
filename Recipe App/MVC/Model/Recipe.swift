@@ -38,7 +38,7 @@ struct Recipe {
                           Roast the chicken for 1 1/2 hours, or until the juices run clear when you cut between a leg and thigh. Remove the chicken
                           and vegetables to a platter and cover with aluminum foil for about 20 minutes. Slice the chicken onto a platter and serve it with the vegetables.
                           """,
-             rating: 5),
+             rating: 3),
       Recipe(name: "French Toast", image: UIImage(named: "french-toast")!,
              description: """
                           In a small bowl, combine, cinnamon, nutmeg, and sugar and set aside briefly.
