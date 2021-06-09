@@ -23,7 +23,6 @@ class DescriptionViewController: UIViewController {
     }
     
     func descriptionSetup(){
-        print(recipeModel)
         if let recipeModel = recipeModel {
             recipeDecTextView.isEditable = false
             recipeImage.image = recipeModel.image
