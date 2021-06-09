@@ -20,14 +20,12 @@ class RecipeListViewController: UIViewController {
         }
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         delegateDatasourceSetup()
         filteredRecipeList = recipeModel
         self.recipeListTableView.keyboardDismissMode = .onDrag
     }
-    
     
     func delegateDatasourceSetup(){
         recipeListTableView.dataSource = self
