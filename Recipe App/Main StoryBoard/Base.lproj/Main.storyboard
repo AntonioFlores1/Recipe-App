@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dyn-qq-eeM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -11,17 +11,17 @@
         <!--Recipe List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="RecipeListViewController" customModule="Recipe_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="descriptionVC" id="BYZ-38-t0r" customClass="RecipeListViewController" customModule="Recipe_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Zeb-fU-X3s">
-                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="z2H-W9-g9w">
-                                <rect key="frame" x="0.0" y="100" width="414" height="762"/>
+                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="recipeListCell" rowHeight="98" id="DSY-08-HdS" customClass="RecipeListTableViewCell" customModule="Recipe_App" customModuleProvider="target">
@@ -84,17 +84,104 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="z2H-W9-g9w" secondAttribute="bottom" id="yIL-Kc-tsO"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Qpd-8N-V8q"/>
                     <connections>
                         <outlet property="recipeListSearchBar" destination="Zeb-fU-X3s" id="5EY-Cw-i94"/>
                         <outlet property="recipeListTableView" destination="z2H-W9-g9w" id="ej5-3P-IYC"/>
+                        <segue destination="d7e-3r-m8L" kind="show" identifier="descriptionVC" id="cz7-kE-ULt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="78.348214285714278"/>
+        </scene>
+        <!--Description View Controller-->
+        <scene sceneID="Eoh-pq-i1k">
+            <objects>
+                <viewController id="d7e-3r-m8L" customClass="DescriptionViewController" customModule="Recipe_App" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HBw-D8-4gj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="owB-ot-QRg">
+                                <rect key="frame" x="20" y="88" width="374" height="270"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="270" id="O7z-7J-XQy"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZb-dh-H1c">
+                                <rect key="frame" x="25" y="388" width="364" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7De-dO-yzD">
+                                <rect key="frame" x="0.0" y="453" width="414" height="409"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgz-LY-DZk">
+                                <rect key="frame" x="25" y="427" width="364" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="snM-F6-3ff"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="snM-F6-3ff" firstAttribute="trailing" secondItem="hgz-LY-DZk" secondAttribute="trailing" constant="25" id="1Ii-5q-1Gk"/>
+                            <constraint firstItem="hgz-LY-DZk" firstAttribute="top" secondItem="mZb-dh-H1c" secondAttribute="bottom" constant="18" id="353-1s-GTJ"/>
+                            <constraint firstItem="7De-dO-yzD" firstAttribute="leading" secondItem="snM-F6-3ff" secondAttribute="leading" id="3mK-Kh-JTX"/>
+                            <constraint firstItem="7De-dO-yzD" firstAttribute="top" secondItem="hgz-LY-DZk" secondAttribute="bottom" constant="5" id="Dcp-uf-Fzs"/>
+                            <constraint firstItem="mZb-dh-H1c" firstAttribute="top" secondItem="owB-ot-QRg" secondAttribute="bottom" constant="30" id="I3r-Wi-mbP"/>
+                            <constraint firstItem="owB-ot-QRg" firstAttribute="leading" secondItem="snM-F6-3ff" secondAttribute="leading" constant="20" id="N5w-zG-PJv"/>
+                            <constraint firstItem="hgz-LY-DZk" firstAttribute="leading" secondItem="snM-F6-3ff" secondAttribute="leading" constant="25" id="Ydm-Zx-tH4"/>
+                            <constraint firstItem="snM-F6-3ff" firstAttribute="trailing" secondItem="owB-ot-QRg" secondAttribute="trailing" constant="20" id="fNZ-iY-M1q"/>
+                            <constraint firstItem="owB-ot-QRg" firstAttribute="top" secondItem="snM-F6-3ff" secondAttribute="top" id="hf3-zV-h6x"/>
+                            <constraint firstItem="mZb-dh-H1c" firstAttribute="leading" secondItem="snM-F6-3ff" secondAttribute="leading" constant="25" id="mHt-JH-m6t"/>
+                            <constraint firstItem="7De-dO-yzD" firstAttribute="bottom" secondItem="snM-F6-3ff" secondAttribute="bottom" id="mrf-Xo-9rn"/>
+                            <constraint firstItem="snM-F6-3ff" firstAttribute="trailing" secondItem="mZb-dh-H1c" secondAttribute="trailing" constant="25" id="o4m-kx-ODp"/>
+                            <constraint firstItem="7De-dO-yzD" firstAttribute="trailing" secondItem="snM-F6-3ff" secondAttribute="trailing" id="ybI-Oa-qhr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="NW6-EH-qbf"/>
+                    <connections>
+                        <outlet property="recipeDecTextView" destination="7De-dO-yzD" id="Tw0-yL-dto"/>
+                        <outlet property="recipeImage" destination="owB-ot-QRg" id="ayr-kY-I9k"/>
+                        <outlet property="recipeNameLabel" destination="mZb-dh-H1c" id="jab-UZ-Bxb"/>
+                        <outlet property="recipeRatingLabel" destination="hgz-LY-DZk" id="kIA-Qw-iYQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4qA-L7-att" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1897.1014492753625" y="77.678571428571431"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Pvd-kz-lBK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dyn-qq-eeM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EGA-fT-FTS">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="LzX-mE-6uP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="he6-UQ-gyQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="78.348214285714278"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
