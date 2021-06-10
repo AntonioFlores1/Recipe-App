@@ -19,6 +19,7 @@
 		7F12258F2670354B0078CF3D /* RecipeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F12258E2670354B0078CF3D /* RecipeListTableViewCell.swift */; };
 		7F12259B267051120078CF3D /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F12259A267051120078CF3D /* UITableViewExtension.swift */; };
 		7F1225A326706D000078CF3D /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1225A226706D000078CF3D /* DescriptionViewController.swift */; };
+		7F1225BA2671B74A0078CF3D /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1225B92671B74A0078CF3D /* AddItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		7F12258E2670354B0078CF3D /* RecipeListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListTableViewCell.swift; sourceTree = "<group>"; };
 		7F12259A267051120078CF3D /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		7F1225A226706D000078CF3D /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
+		7F1225B92671B74A0078CF3D /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 			children = (
 				7F12253E26702E660078CF3D /* RecipeListViewController.swift */,
 				7F1225A226706D000078CF3D /* DescriptionViewController.swift */,
+				7F1225B92671B74A0078CF3D /* AddItemViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				7F12253B26702E660078CF3D /* AppDelegate.swift in Sources */,
 				7F12258F2670354B0078CF3D /* RecipeListTableViewCell.swift in Sources */,
 				7F12259B267051120078CF3D /* UITableViewExtension.swift in Sources */,
+				7F1225BA2671B74A0078CF3D /* AddItemViewController.swift in Sources */,
 				7F12253D26702E660078CF3D /* SceneDelegate.swift in Sources */,
 				7F12257226702E950078CF3D /* Recipe.swift in Sources */,
 			);
