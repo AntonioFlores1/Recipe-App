@@ -166,10 +166,51 @@
                     <view key="view" contentMode="scaleToFill" id="Y9m-0i-nfr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gFT-gt-iIi">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="addItem" rowHeight="83" id="vfx-lx-lGt" customClass="AddItemTableViewCell" customModule="Recipe_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="83"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vfx-lx-lGt" id="yBW-oq-YSH">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roasted Chicken" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJc-SO-cXk">
+                                                    <rect key="frame" x="30" y="31" width="344" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bJc-SO-cXk" firstAttribute="leading" secondItem="yBW-oq-YSH" secondAttribute="leadingMargin" constant="10" id="3yQ-CL-lYw"/>
+                                                <constraint firstItem="bJc-SO-cXk" firstAttribute="top" secondItem="yBW-oq-YSH" secondAttribute="topMargin" constant="20" id="bZC-fw-11F"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="bJc-SO-cXk" secondAttribute="trailing" constant="20" id="z6f-6m-1d9"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="bJc-SO-cXk" id="TAJ-WB-HQf"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="tE5-WM-6Cf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gFT-gt-iIi" firstAttribute="top" secondItem="tE5-WM-6Cf" secondAttribute="top" id="1j6-eK-jB8"/>
+                            <constraint firstItem="tE5-WM-6Cf" firstAttribute="bottom" secondItem="gFT-gt-iIi" secondAttribute="bottom" id="Ie9-7j-1DA"/>
+                            <constraint firstItem="gFT-gt-iIi" firstAttribute="leading" secondItem="tE5-WM-6Cf" secondAttribute="leading" id="Xyu-bB-eoA"/>
+                            <constraint firstItem="tE5-WM-6Cf" firstAttribute="trailing" secondItem="gFT-gt-iIi" secondAttribute="trailing" id="ZUS-Fm-Vsc"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="V4L-zQ-Mfs"/>
+                    <connections>
+                        <outlet property="addItemTabelView" destination="gFT-gt-iIi" id="OlQ-om-ZCn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JLd-oP-uRp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

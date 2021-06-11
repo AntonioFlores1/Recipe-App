@@ -1,21 +1,19 @@
 //
-//  RecipeListTableViewCell.swift
+//  AddItemTableViewCell.swift
 //  Recipe App
 //
-//  Created by Antonio Flores on 6/8/21.
+//  Created by Antonio Flores on 6/9/21.
 //
 
 import UIKit
 
-class RecipeListTableViewCell: UITableViewCell {
+class AddItemTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var recipeImage: UIImageView!
-    @IBOutlet weak var recipeName: UILabel!
-    @IBOutlet weak var recipeRating: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
